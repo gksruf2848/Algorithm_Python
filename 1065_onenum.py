@@ -1,10 +1,3 @@
-def find_onenum(x):
-    a, b, c = int(x/100), int(x/10%10), int(x%10)
-    if b-a == c-b:
-        return True
-    else:
-        return False
-
 n = int(input())
 
 if n == 1000:
@@ -14,6 +7,6 @@ elif n < 100:
 else:
     cnt = 99
     for i in range(100, n+1):
-        if find_onenum(i):
+        if i//10%10 - i//100 == i%10 - i//10%10:
             cnt += 1
     print(cnt)
