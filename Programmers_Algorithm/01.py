@@ -6,4 +6,4 @@ def solution(arr):
     
     return answer
 
-print(solution(input()))
+#print(solution(input()))
