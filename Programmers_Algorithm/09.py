@@ -9,4 +9,5 @@ def solution(array, height):
 
 
 arr = [149, 180, 192, 170]
+print(arr.remove(max(arr)))
 print(solution(arr, 167))
