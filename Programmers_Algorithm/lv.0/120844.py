@@ -1,14 +1,9 @@
 def solution(numbers, direction):
-    answer = numbers
     if direction == "right":
-        for i in range(len(numbers)):
-            print(answer, numbers)
-            answer[(i+1)%len(numbers)] = numbers[i]
+        numbers.insert(0,numbers.pop())
     else:
-        for i in range(len(numbers)):
-            answer[i] = numbers[(i+1)%len(numbers)]
-    return answer
-
+        numbers.append(numbers.pop(0))
+    return numbers
 
 arr = [1, 2, 3]
 print(solution(arr, "right"))
