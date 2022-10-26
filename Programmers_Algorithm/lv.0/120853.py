@@ -1,9 +1,23 @@
 def solution(s):
-    answer = []
-    s = s.split(" ")
-    for i in range(len(s)-1):
-        if s[i+1] != "Z" and s[i] != "Z":
-            answer.append(s[i])
-    if s[-1] != "Z":
-        answer.append(s[-1])
-    return sum(list(map(int,answer)))
+    answer, i = 0, 1
+    s = s.split(' ')
+        
+    while(i < len(s) and i >= 0):
+        if s[0] == 'Z':
+            s.pop(0)
+            
+        print(i, s)
+        if s[i] == 'Z':
+            if s[i-1] != 'Z':
+                s.pop(i)
+                s.pop(i-1)
+                i -= 2
+            else:
+                s.pop(i)
+                i -= 1
+        i += 1
+    
+    return sum(list(map(int,s)))
+
+
+print(solution("Z Z 10 20 Z Z 1"))
