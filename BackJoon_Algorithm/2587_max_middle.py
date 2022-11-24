@@ -1,2 +1,3 @@
 lst = [int(input()) for i in range(5)]
-print(str(sum(lst)//len(lst)) + '\n' + str(sorted(lst)[2]))
+print(sum(lst)//5)
+print(sorted(lst)[2])
