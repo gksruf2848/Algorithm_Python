@@ -38,6 +38,6 @@ def solution(maps):
             
             check[xx][yy] = True
             q.append([xx,yy,check,tmp[3]+1])
-            check[xx][yy] = False        
+            check[xx][yy] = False
     
     return answer
