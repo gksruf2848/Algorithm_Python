@@ -18,4 +18,3 @@ def solution(progresses, speeds):
             cnt += 1
     answer.append(cnt)
     return answer
-    
