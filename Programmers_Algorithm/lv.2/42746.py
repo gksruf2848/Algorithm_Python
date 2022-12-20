@@ -1,10 +1,5 @@
-from itertools import permutations
-
 def solution(numbers):
-    answer = list(permutations(numbers,len(numbers)))
-
-    for i in range(len(answer)):
-        answer[i] = list(map(str, answer[i]))
-        answer[i] = ''.join(answer[i])
+    answer = list(map(str,numbers))
+    answer.sort(key=lambda x: x*4, reverse=True)
     
-    return max(answer)
+    return str(int(''.join(answer)))
