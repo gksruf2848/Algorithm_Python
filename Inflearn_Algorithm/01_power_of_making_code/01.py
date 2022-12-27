@@ -9,4 +9,4 @@ def solution(n, k):
             break
     print(answer)
 
-solution(6, 3)
+solution(6, 5)
