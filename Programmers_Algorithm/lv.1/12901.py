@@ -10,3 +10,4 @@ def solution(a, b):
             answer += 29
     answer += b
     return days[answer%7]
+    
